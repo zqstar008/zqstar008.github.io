@@ -1,14 +1,34 @@
 //index.js
-//获取应用实例
-const app = getApp()
 
+//获取应用实例
+
+const app = getApp()
+// 是同Page()构造器注册页面
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    word:"wh1910-daydayup",
+    message:'Are you OK',
+    token:app.globalData.token
   },
+  changeToken(){
+    this.setData({
+      token:"todomobile"
+    })
+  },
+  gotoHome(){
+    // wx.navigateTo({
+    //   url: '../home/home?id=1234',
+    // })
+    wx.switchTab({
+      url: '../home/home?id=1234'
+    })
+
+  },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

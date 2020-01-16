@@ -1,6 +1,7 @@
 //app.js
+// app() 用来注册一个小程序
 App({
-  onLaunch: function () {
+  onLaunch: function () { //onlaunch  发射，发行 
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -33,7 +34,11 @@ App({
       }
     })
   },
+  todoStart(){
+    
+  },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    token:'13517234012'
   }
 })
